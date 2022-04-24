@@ -79,6 +79,7 @@ main{
     text-align: center;
     padding: 2rem 5rem;
     font-size: 3rem;
+    margin-bottom: 2rem !important;
     text-transform: uppercase;
     background-color: black;
     margin-bottom: 2.4rem;
@@ -99,8 +100,26 @@ main{
   }
 
 }
+@media (max-width:799px){
+  .contenido_canchas_ul{
+   
+    display:grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 1rem;
+    margin-bottom: 2rem;
+    margin-top: 2rem;
+ 
+    .container_ul{
+
+      display: flex !important;
+  
+    }
+
+  }
+ 
+}
 @media(max-width:800px){
-.contenido_canchas_h1{
+.contenido_canchas_h1 li{
   font-size: 5rem !important;
 }
   .container_cancha{

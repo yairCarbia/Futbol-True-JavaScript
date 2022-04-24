@@ -87,7 +87,7 @@ header {
         color: var(--secundario);
         background-color: #3c7209;
         transition: 0.4s ease-out all; }
-  
+    > > >
 header .hero_promo {
       padding-top: 350px;
       display: flex;
@@ -303,13 +303,12 @@ main .container {
   .menu_logo {
     font-size: 3rem !important; }
   .menu_link {
-    width: 75px !important;
-    padding-top: 10px !important;
+    width: 91px !important;
     padding-bottom: 10px !important;
     margin-bottom: 0rem !important;
     margin-right: 0rem !important;
     margin-left: -1rem !important;
-    font-size: 2rem !important; } }
+    font-size: 1.9rem !important; } }
 
 @media (max-width: 768px) {
   h1 {
@@ -449,6 +448,7 @@ main {
     text-align: center;
     padding: 2rem 5rem;
     font-size: 3rem;
+    margin-bottom: 2rem !important;
     text-transform: uppercase;
     background-color: black;
     margin-bottom: 2.4rem;
@@ -462,8 +462,18 @@ main {
   main .efecto {
     animation: efecto 1s; }
 
+@media (max-width: 799px) {
+  .contenido_canchas_ul {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+    margin-bottom: 2rem;
+    margin-top: 2rem; }
+    .contenido_canchas_ul .container_ul {
+      display: flex !important; } }
+
 @media (max-width: 800px) {
-  .contenido_canchas_h1 {
+  .contenido_canchas_h1 li {
     font-size: 5rem !important; }
   .container_cancha {
     margin-left: 2rem !important; }
@@ -495,6 +505,20 @@ main .container {
     width: 300px;
     height: 200px;
     margin-left: 35rem; }
+  main .container_objetivos .menu_link_objetivos {
+    color: #fff;
+    display: inline-block;
+    padding: 20px;
+    width: 100%;
+    text-align: center;
+    color: var(--color);
+    transition: 0.4s ease-out all;
+    margin-bottom: 2rem;
+    cursor: pointer; }
+    main .container_objetivos .menu_link_objetivos:hover {
+      background: #3c7209;
+      color: #fff;
+      text-decoration: none; }
 
 @media (max-width: 799px) {
   .contenedor_img5 {
@@ -511,6 +535,25 @@ main .container {
     margin-left: 3rem !important; }
   .menu_link {
     margin-bottom: 2rem !important; } }
+
+header .submenu {
+  position: relative; }
+
+header .submenu #carrito {
+  display: none; }
+
+header .submenu:hover #carrito {
+  font-family: "Bebas Neue", cursive;
+  font-size: 3rem;
+  display: block;
+  position: absolute;
+  right: 0;
+  top: 100%;
+  z-index: 1;
+  background-color: #3c7209;
+  padding: 10px;
+  min-height: 450px;
+  min-width: 300px; }
 
 main .container_aside2 {
   min-width: 10%;
@@ -551,9 +594,17 @@ main .container_canchas_boton {
     background-color: #3c7209;
     transition: 0.4s ease-out all; }
 
+main .container .contenedor_tienda_pelotas {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); }
+
 main .container .container_tienda .container_tienda_pelotas {
   display: grid;
-  grid-template-columns: repeat(1, 1fr); }
+  grid-template-columns: repeat(3, 1fr); }
+
+main .container .container_tienda .container_imgs {
+  width: 300px !important;
+  height: 300px !important; }
 
 @media only screen and (min-width: 1250px) and (max-width: 1980px) {
   .container_cancha {
@@ -631,5 +682,5 @@ main .container .container_tienda .container_tienda_pelotas {
       background-color: #3c7209;
       transition: 0.4s ease-out all; }
   main .container .container_tienda .container_tienda_pelotas {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr); } }
+    margin-left: -10rem;
+    display: grid; } }

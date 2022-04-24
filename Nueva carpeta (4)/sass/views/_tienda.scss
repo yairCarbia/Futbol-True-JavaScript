@@ -1,3 +1,29 @@
+header{
+  .submenu {
+    position: relative;
+  }
+  
+  .submenu #carrito{
+    display: none;
+    
+  }
+  .submenu:hover #carrito{
+    font-family: $fuente;
+    font-size: 3rem;
+    
+    display: block;
+    position: absolute;
+    right:0;
+  
+    top:100%;
+    z-index: 1;
+    background-color: #3c7209;
+    padding: 10px;
+    min-height: 450px;
+    min-width: 300px;
+  } 
+}
+
 main{
     .container{
         // display: flex;
@@ -43,13 +69,16 @@ main{
                 transition: 0.4s ease-out all;
               }  
         }
-     
+     .contenedor_tienda_pelotas{
+       display: grid;
+       grid-template-columns: repeat(3,1fr);
+     }
         .container_tienda{
 
          .container_tienda_pelotas {
             display: grid;    
             // display: flex;
-                 grid-template-columns: repeat(1, 1fr); 
+                 grid-template-columns: repeat(3, 1fr); 
                 // flex-direction: row;
                 // margin-left: 0rem;
                 // align-items: center;
@@ -59,6 +88,11 @@ main{
             //      grid-template-columns: repeat(1, 1fr); 
             //     // flex-direction: column;
             //   }
+
+            .container_imgs  {
+ width:300px !important;
+ height: 300px !important;
+            }
         }
     }
 }
@@ -185,9 +219,10 @@ main{
         .container_tienda{
 
          .container_tienda_pelotas {
-            display: grid;    
+          margin-left: -10rem;  
+          display: grid;    
             // display: flex;
-                 grid-template-columns: repeat(2, 1fr); 
+                //  grid-template-columns: repeat(2, 1fr); 
                 // flex-direction: row;
                 // margin-left: 0rem;
                 // align-items: center;

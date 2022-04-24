@@ -17,8 +17,25 @@ main{
                 height: 200px;
                 margin-left: 35rem;
               } }
-              &_objetivos{
-
+        &_objetivos{
+          .menu_link_objetivos{
+           
+              color: #fff;
+              display: inline-block;
+              padding: 20px;
+              width: 100%;
+              text-align: center;
+              color: var(--color);
+              transition: 0.4s ease-out all;
+              margin-bottom: 2rem;
+            cursor: pointer;
+            
+            &:hover {
+              background: #3c7209;
+              color: #fff;
+              text-decoration: none;
+            }
+          }
               }
             }
 }
