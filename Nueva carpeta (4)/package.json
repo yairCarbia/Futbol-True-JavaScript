@@ -1,0 +1,25 @@
+{
+  "name": "futbol-true-",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build-sass": "node-sass --include-path scss sass/index.scss css/main.css",
+    "watch-sass": "nodemon -e scss -x \"npm run build-sass\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yairCarbia/Futbol-True-.git"
+  },
+  "author": "yair carbia",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/yairCarbia/Futbol-True-/issues"
+  },
+  "homepage": "https://github.com/yairCarbia/Futbol-True-#readme",
+  "devDependencies": {
+    "node-sass": "^7.0.1",
+    "nodemon": "^2.0.15"
+  }
+}

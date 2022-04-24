@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="css/styles.css" />
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet" />
+  <title>FUTBOL=TRUE!</title>
+</head>
+
+<body>
+  <header>
+    <nav class="navbar flex-row container2 efecto" id="canchas">
+      <div class="flex-row container_logo ">
+        <picture class="logo_img ">
+          <img src="img/campo-de-futbol.png" alt="gol" class="logo_img">
+        </picture>
+
+
+        <a href="index.html">
+          <h1 class="logo_nombre">
+            Futbol=<span class="logo__bold">True!</span>
+          </h1>
+        </a>
+      </div>
+
+      <ul class="menu flex-column    ">
+        <li><a class="menu_link" href="canchas.html">Canchas</a></li>
+        <li><a class="menu_link" href="escuela.html">Escuela</a></li>
+        <li><a class="menu_link" href="tienda.html">Tienda</a></li>
+        <li><a class="menu_link" href="contacto.html">Contacto</a></li>
+      </ul>
+
+
+    </nav>
+
+  </header>
+
+  <section>
+    <main class="container_contacto">
+      <h3 class="centrar-texto negro container_h4">Contacto</h3>
+
+      <div class="contacto-bg container_contacto"></div>
+
+      <form class="formulario container_form">
+        <div class="campo container_form-camp">
+          <label class="campo__label container_camp_label" for="nombre">Nombre</label>
+          <input class="campo__field container_camp_fiel" type="text" placeholder="Tu Nombre" id="nombre" />
+        </div>
+        <div class="campo campo container_form-camp">
+          <label class="campo__label container_camp_label" for="email">E-mail</label>
+          <input class="campo__field container_camp_field" type="email" placeholder="Tu E-mail" id="email" />
+        </div>
+        <div class="campo campo container_form-camp">
+          <label class="campo__label container_camp_label" for="mensaje">Mensaje</label>
+          <textarea class="campo__field container_camp_field campo__field--textarea container_camp_field--textarea"
+            id="mensaje"></textarea>
+        </div>
+
+        <div class="campo container_form-camp ">
+          <input type="submit" value="Enviar" class="container_form_boton boton boton--primario" />
+        </div>
+      </form>
+    </main>
+  </section>
+
+  <footer>
+    <nav class="menu flex-row " id="canchas">
+      <div class="flex-row menu_div">
+        <picture class="menu_div_pic ">
+          <img src="img/campo-de-futbol.png" alt="gol" class="logo_img menu_div_pic--img">
+        </picture>
+
+
+        <h2 class="menu_logo">
+          Futbol=<span class="logo__bold">True!</span>
+        </h2>
+
+      </div>
+
+      <!-- <ul class=" flex-row menu_div_ul">
+            <li><a class="menu_link" href="canchas.html">Canchas</a></li>
+            <li><a class="menu_link" href="escuela.html">Escuela</a></li>
+            <li><a class="menu_link" href="tienda.html">Tienda</a></li>
+            <li><a class="menu_link" href="contacto.html">Contacto</a></li>
+        </ul> -->
+
+
+    </nav>
+  </footer>
+</body>
+
+</html>

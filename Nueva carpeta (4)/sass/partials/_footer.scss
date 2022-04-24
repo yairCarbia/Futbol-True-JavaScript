@@ -1,0 +1,28 @@
+footer{
+  background-color: var($secundario);
+  nav {
+  .menu {
+    background-color: var($secundario);
+    margin-bottom: 0rem;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    flex-basis: 30%;
+    &_div_ul {
+        flex-basis: 30%;
+      }  
+   
+      &_logo {
+        color: var($color);
+        font-size: 5rem;
+        padding-top: 2rem;
+      }
+    &_div{
+      margin-left: 2rem;
+    }
+  } 
+
+ }
+   
+}
+

@@ -1,0 +1,31 @@
+/* HELPERS */
+.color-n {
+  color: var($secundario);
+}
+.centrar-txt {
+  text-align: center;
+  color: var($secundario);
+}
+.flex-column {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.flex-row {
+  display: flex;
+}
+
+@mixin tamañoImg ($width,$height){
+  height: $height;
+  width: $width;
+}
+
+.container_img{
+  @include tamañoImg(300px,200px );
+}
+.container_img2{
+  @include tamañoImg(300px,200px );
+}
+.container_img3{
+  @include tamañoImg(300px,200px );
+}
