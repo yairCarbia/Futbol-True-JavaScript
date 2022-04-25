@@ -1,0 +1,102 @@
+main{
+ .container_h4{
+text-align: center;
+ }
+    .container_form {
+        margin-left: 20rem;
+        margin-right: 20rem;
+        margin-bottom:2rem;
+      }
+      .campo__label {
+        margin-left: -4rem;
+      }
+    
+      .campo__field {
+        margin-left: -2rem;
+      }
+      .campo__field--textarea {
+        margin-right: -3rem;
+      }
+}
+@media only screen and (min-width: 770px) and (max-width: 1500px) {
+  .container_h4 {
+    color: var($color) !important;
+    text-align: center !important;
+  }
+  .container_form {
+    margin-left: 10rem  !important;
+    margin-right: 8rem !important;
+    margin-bottom: 2rem  !important;
+  }
+  .campo__label {
+    margin-left: -4rem !important;
+  }
+
+  .campo__field {
+    margin-left: -2rem !important;
+  }
+  .campo__field--textarea {
+    margin-right: -3rem  !important;
+  }
+}
+@media only screen and (min-width: 300px) and (max-width: 768px) {
+  .container_h4 {
+    color: var($color) !important;
+    text-align: center !important;
+  }
+  .container_form {
+    margin-left: 2rem  !important;
+    margin-right: 2rem !important;
+    margin-bottom: 2rem  !important;
+  }
+  .campo__label {
+    margin-left: -4rem !important;
+  }
+
+  .campo__field {
+    margin-left: -2rem !important;
+  }
+  .campo__field--textarea {
+    margin-right: -3rem  !important;
+  }
+}
+@media (max-width:768){
+  .container_form {
+    margin-left: -20rem !important;
+    margin-right: 2rem !important;
+    margin-bottom:2rem !important;
+  }
+  .campo__label {
+    margin-left: -4rem !important;
+  }
+
+  .campo__field {
+    margin-left: -2rem !important;
+  }
+  .campo__field--textarea {
+    margin-right: -3rem !important;
+  }
+  .container_contacto,
+  .contacto-bg {
+    // background-image: url(../img/chancha\ de\ 7\ turno\ nocturno.jpg);
+  }
+  .container_h4 {
+    color: var($color) !important;
+    text-align: center !important;
+  }
+  .container_form {
+    margin-left: -44rem  !important;
+    margin-right: 20rem !important;
+    margin-bottom: 2rem  !important;
+  }
+  .campo__label {
+    margin-left: -4rem !important;
+  }
+
+  .campo__field {
+    margin-left: -2rem !important;
+  }
+  .campo__field--textarea {
+    margin-right: -3rem  !important;
+  }
+}

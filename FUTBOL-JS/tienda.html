@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+    <title>FUTBOL=TRUE!</title>
+</head>
+
+<body>
+    <header>
+        <nav class="navbar flex-row container2 efecto" id="canchas">
+            <div class="flex-row container_logo ">
+                <picture class="logo_img ">
+                    <img src="img/campo-de-futbol.png" alt="gol" class="logo_img">
+                </picture>
+
+
+                <a href="index.html">
+                    <h1 class="logo_nombre">
+                        Futbol=<span class="logo__bold">True!</span>
+                    </h1>
+                </a>
+            </div>
+
+            <ul class="menu  flex-row  ">
+                <li><a class="menu_link" href="canchas.html">Canchas</a></li>
+                <li><a class="menu_link" href="escuela.html">Escuela</a></li>
+                <li><a class="menu_link" href="tienda.html">Tienda</a></li>
+                <li><a class="menu_link" href="contacto.html">Contacto</a></li>
+            </ul>
+            <ul>
+                <li class="submenu">
+                    <div>
+                        <img src="img/icons8-carrito-de-la-compra-cargado-60.png" alt="carrito">
+                    </div>
+                    <div id="carrito">
+
+                        <table class="table">
+                            <thead>
+                                <tr>
+                                    <th scope="col">Imagen</th>
+                                    <th scope="col">Item</th>
+                                    <th scope="col">Precio</th>
+                                    <th scope="col">Cantidad</th>
+
+                                </tr>
+                            </thead>
+                            <tbody id="items">
+
+                            </tbody>
+                            <p>Precio Total:$ <span id="total">0</span></p>
+                        </table>
+
+                    </div>
+                </li>
+            </ul>
+
+        </nav>
+
+
+
+    </header>
+    <select id="selectBotines" class="form-select form-select-lg mb-3" aria-label=".form-select-lg example">
+        <option selected value="all">Selecciona por talles BOTINES!</option>
+        <option value="S">S</option>
+        <option value="M">M</option>
+        <option value="L">L</option>
+        <option value="XL">XL</option>
+    </select>
+
+    <select id="selectPelota" class="form-select form-select-lg mb-3" aria-label=".form-select-lg example">
+        <option selected value="all">Selecciona por taller Pelotas</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+    </select>
+    <section>
+        <main id="contenedor_productos" class="productos">
+
+            <div class=" flex-row container">
+
+                <!-- <aside id="aside2" class="flex-column titulo aside2 aside3 container_aside2">
+                    <h3 class="titulo container_h3">Tienda</h3>
+                    <nav class="indice  flex-column container_aside_nav">
+                        <a class="boton container_canchas_boton" href="#penalty">Pelota penalty</a>
+                        <a class="boton container_canchas_boton" href="#topper">Pelota topper</a>
+                        <a class="boton container_canchas_boton" href="#puma">Pelota puma</a>
+                        <a class="boton container_canchas_boton" href="#nike2">Pelota nike</a>
+                        <!-- 
+                        <a class="boton container_canchas_boton" href="#adidas">Botin adidas</a>
+                        <a class="boton container_canchas_boton" href="#nike">Botin nike</a> -->
+
+
+                </nav>
+                </aside> -->
+                <!-- flex-row  -->
+                <div class="contenedor_tienda_pelotas container_tienda ">
+
+                    <!-- div de abajo clases :flex-column contenedor_tienda_grid ancla -->
+                    <div class="  container_tienda_pelotas" id="tienda-futbol">
+
+                        <!-- fin pelotas -->
+                    </div>
+
+                </div>
+            </div>
+            </div>
+
+            </div>
+
+
+            </div>
+
+        </main>
+    </section>
+    <footer>
+        <nav class="menu flex-row " id="canchas">
+            <div class="flex-row menu_div">
+                <picture class="menu_div_pic ">
+                    <img src="img/campo-de-futbol.png" alt="gol" class="logo_img menu_div_pic--img">
+                </picture>
+
+
+                <h2 class="menu_logo">
+                    Futbol=<span class="logo__bold">True!</span>
+                </h2>
+
+            </div>
+
+            <!-- <ul class=" flex-row menu_div_ul">
+                <li><a class="menu_link" href="canchas.html">Canchas</a></li>
+                <li><a class="menu_link" href="escuela.html">Escuela</a></li>
+                <li><a class="menu_link" href="tienda.html">Tienda</a></li>
+                <li><a class="menu_link" href="contacto.html">Contacto</a></li>
+            </ul> -->
+
+
+        </nav>
+    </footer>
+    <script src=" https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous">
+
+        </script>
+    <script src="stock.js"></script>
+    <script src="app.js"></script>
+</body>
+
+</html>
+
+
+
+<!-- <div class="contenedor_tienda_pelotas flex-column">
+    <div class="flex-column contenedor_tienda_grid ">
+        <div class="contenedor_tienda_producto">
+            <h3>botines adidas</h3>
+            <img src="img/badiadas.jpg" alt="adidas">
+            <h3>$2000</h3>
+            <a href="#"> <button class="boton" type="button" href="#">
+                    Comprar</button></a>
+            </p>
+        </div>
+        <div class="contenedor_tienda_producto">
+            <h3>botines nike</h3>
+            <img src="img/bnike.jpg" alt="adidas">
+            <h3>$2000</h3>
+            <a href="#"> <button class="boton" type="button" href="#">
+                    Comprar</button></a>
+            </p>
+        </div>
+        <div class="contenedor_tienda_producto">
+            <h3>botines UMBRO</h3>
+            <img src="img/bumbro.jpg" alt="adidas">
+            <h3>$2000</h3>
+            <a href="#"> <button class="boton" type="button" href="#">
+                    Comprar</button></a>
+            </p>
+        </div>
+        <div class="contenedor_tienda_producto">
+            <h3>botines puma</h3>
+            <img src="img/bpuma.jpg" alt="adidas">
+            <h3>$2000</h3>
+            <a href="#"> <button class="boton" type="button" href="#">
+                    Comprar</button></a>
+            </p>
+        </div>
+    </div>
+</div>
+
+</div>
+</div> -->
