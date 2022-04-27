@@ -24,6 +24,7 @@ const total= document.querySelector("#total");
 
 selectBotines.addEventListener("change",()=>{
     selectBotines.value=="all" ? mostrarProductos(stockProductos) :mostrarProductos(stockProductos.filter(element=>element.talle==selectBotines.value));
+  //OPTIMIZADO
     // if (selectBotines.value=="all"){
     //    mostrarProductos(stockProductos);
     // }else{
@@ -88,8 +89,10 @@ function agregarCarrito(id){
         let producto = stockProductos.find(element => element.id === id);
         producto.cantidad=1;
     //  console.log(carrito.push(producto));
-     let carr = [...carrito,producto];
-    console.log(c);
+    //OPTIMIZADO
+    let carr = [...carrito,producto];
+    
+
      mostrarCarrito(producto);    
     
      actualizarCarrito();  
