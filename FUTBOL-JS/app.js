@@ -23,11 +23,12 @@ const total= document.querySelector("#total");
 
 
 selectBotines.addEventListener("change",()=>{
-    if (selectBotines.value=="all"){
-       mostrarProductos(stockProductos);
-    }else{
-        mostrarProductos(stockProductos.filter(element=>element.talle==selectBotines.value));
-    }
+    selectBotines.value=="all" ? mostrarProductos(stockProductos) :mostrarProductos(stockProductos.filter(element=>element.talle==selectBotines.value));
+    // if (selectBotines.value=="all"){
+    //    mostrarProductos(stockProductos);
+    // }else{
+    //     mostrarProductos(stockProductos.filter(element=>element.talle==selectBotines.value));
+    // }
 })
 selectPelota.addEventListener("change",()=>{
     if (selectPelota.value=="all"){
@@ -86,8 +87,11 @@ function agregarCarrito(id){
     }else{
         let producto = stockProductos.find(element => element.id === id);
         producto.cantidad=1;
-     carrito.push(producto);
+    //  console.log(carrito.push(producto));
+     let carr = [...carrito,producto];
+    console.log(c);
      mostrarCarrito(producto);    
+    
      actualizarCarrito();  
     }
    localStorage.setItem("carrito",JSON.stringify(carrito));
@@ -151,7 +155,7 @@ let obtener =JSON.parse(localStorage.getItem("carrito"));
 if (obtener){
     obtener.forEach(element=>{
     mostrarCarrito(element);
-    carrito.push(el);
+    carrito.push(element);
    actualizarCarrito();
     })
 }
