@@ -1,3 +1,5 @@
+
+
 //Variables 
 
 let carrito = [];
@@ -54,8 +56,10 @@ function mostrarProductos(array){
         div.innerHTML += `
                
                 <div class="contenedor_tienda_producto card extra ancla container_pelota--penalty">
-                    <h3 id="penalty">${element.nombre}</h3>
+                   
                     <img src="${element.img}" alt="adidas" class="container_imgs">
+                    <h3 id="penalty">${element.nombre}</h3>
+                   
                     <h4>${element.precio}</h4>
                     <h5>TALLE:${element.talle}</h5>
                     <a id="agregar${element.id}" class="ancla" href="#"> <button class="boton ancla container_canchas_boton agregar"
@@ -69,6 +73,23 @@ function mostrarProductos(array){
         let btnAdd=document.querySelector(`#agregar${element.id}`);
      btnAdd.addEventListener("click",()=>{
          agregarCarrito(element.id);
+         Swal.fire({
+           heigth:600,
+          
+           showClass: {
+                popup: 'animate__animated animate__backInLeft'
+              },
+              hideClass: {
+                popup: 'animate__animated animate__fadeOutRightBig'
+              },
+              background: " url(/img/7.jpg)",
+            position: 'center',
+            icon: 'success',
+            title: 'PRODUCTO AGREGADO CORRECTAMENTE',
+            showConfirmButton: false,
+            timer: 1500
+          })
+      
      })
             
             });
@@ -126,23 +147,70 @@ function mostrarCarrito(producto){
 
     let btnDelete   =document.querySelector(`#eliminar${producto.id}`);
     btnDelete.addEventListener("click",()=>{
-      if(producto.cantidad==1){
-        btnDelete.parentElement.parentElement.remove(); 
-        carrito= carrito.filter(element =>element.id != producto.id );
-        actualizarCarrito(); 
-        localStorage.setItem("carrito",JSON.stringify(carrito));  
-    }
-        else{
-            producto.cantidad=producto.cantidad-1;
-            document.getElementById(`und${producto.id}`).innerHTML=`
-            
-            <p id="und${producto.id}">  Und:${producto.cantidad} </p>
-            `;
-            actualizarCarrito(); 
-            localStorage.setItem("carrito",JSON.stringify(carrito));
-        }
+    
+        Swal 
+        .fire({
+            heigth:600,
           
+            showClass: {
+                 popup: 'animate__animated animate__backInLeft'
+               },
+               hideClass: {
+                 popup: 'animate__animated animate__fadeOutRightBig'
+               },
+               background: " url(/img/7.jpg)",
+             position: 'center',
+            title: "Desea...",
+            text: "¿Eliminar?",
+            icon: 'warning',
+            showCancelButton: true,
+            confirmButtonText: "Sí, eliminar",
+            cancelButtonText: "Cancelar",
+        })
+        .then(resultado => {
+            if (resultado.value) {
+                if(producto.cantidad==1){
+                    btnDelete.parentElement.parentElement.remove(); 
+                    carrito= carrito.filter(element =>element.id != producto.id );
+                    actualizarCarrito(); 
+                    localStorage.setItem("carrito",JSON.stringify(carrito));  
+                    
+                }
+                    else{
+                        producto.cantidad=producto.cantidad-1;
+                        document.getElementById(`und${producto.id}`).innerHTML=`
+                        
+                        <p id="und${producto.id}">  Und:${producto.cantidad} </p>
+                        `;
+                        actualizarCarrito(); 
+                        localStorage.setItem("carrito",JSON.stringify(carrito));
+                    }
+                console.log("*se elimina la venta*");
+            } else {
+                // Dijeron que no
+                console.log("*NO se elimina la venta*");
+            }
+        });
+    //     if(producto.cantidad==1){
+    //     btnDelete.parentElement.parentElement.remove(); 
+    //     carrito= carrito.filter(element =>element.id != producto.id );
+    //     actualizarCarrito(); 
+    //     localStorage.setItem("carrito",JSON.stringify(carrito));  
+        
+    // }
+    //     else{
+    //         producto.cantidad=producto.cantidad-1;
+    //         document.getElementById(`und${producto.id}`).innerHTML=`
+            
+    //         <p id="und${producto.id}">  Und:${producto.cantidad} </p>
+    //         `;
+    //         actualizarCarrito(); 
+    //         localStorage.setItem("carrito",JSON.stringify(carrito));
+    //     }
+          
+    
     })
+    
 }
     
 
