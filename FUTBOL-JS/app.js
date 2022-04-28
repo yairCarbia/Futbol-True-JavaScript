@@ -73,6 +73,7 @@ function mostrarProductos(array){
         let btnAdd=document.querySelector(`#agregar${element.id}`);
      btnAdd.addEventListener("click",()=>{
          agregarCarrito(element.id);
+        //Adicion libreria
          Swal.fire({
            heigth:600,
           
@@ -147,7 +148,7 @@ function mostrarCarrito(producto){
 
     let btnDelete   =document.querySelector(`#eliminar${producto.id}`);
     btnDelete.addEventListener("click",()=>{
-    
+    //Adicion Libreria
         Swal 
         .fire({
             heigth:600,
