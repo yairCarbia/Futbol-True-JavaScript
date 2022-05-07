@@ -52,3 +52,6 @@ let stockProductos = [
 
 
 ];
+
+// const jsonStock = JSON.stringify(stockProductos);
+// console.log(jsonStock);

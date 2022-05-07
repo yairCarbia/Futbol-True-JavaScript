@@ -7,9 +7,14 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="stylesheet" href="css/styles.css" />
   <link rel="stylesheet" href="css/main.css">
+
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
   <title>FUTBOL=TRUE!</title>
 </head>
 
@@ -48,28 +53,33 @@
 
       <div class="contacto-bg container_contacto"></div>
 
-      <form class="formulario container_form">
+      <form class="formulario container_form" id="form">
         <div class="campo container_form-camp">
           <label class="campo__label container_camp_label" for="nombre">Nombre</label>
-          <input class="campo__field container_camp_fiel" type="text" placeholder="Tu Nombre" id="nombre" />
+          <input class="campo__field container_camp_fiel" type="text" placeholder="Tu Nombre" id="nombre" name="name"
+            required />
         </div>
         <div class="campo campo container_form-camp">
           <label class="campo__label container_camp_label" for="email">E-mail</label>
-          <input class="campo__field container_camp_field" type="email" placeholder="Tu E-mail" id="email" />
+          <input class="campo__field container_camp_field" type="email" placeholder="Tu E-mail" id="email" name="email"
+            required />
         </div>
         <div class="campo campo container_form-camp">
           <label class="campo__label container_camp_label" for="mensaje">Mensaje</label>
           <textarea class="campo__field container_camp_field campo__field--textarea container_camp_field--textarea"
-            id="mensaje"></textarea>
+            id="mensaje" name="textarea" required></textarea>
         </div>
 
         <div class="campo container_form-camp ">
-          <input type="submit" value="Enviar" class="container_form_boton boton boton--primario" />
+          <input type="submit" value="Enviar" class="container_form_boton boton boton--primario" name="boton"
+            id="button" />
         </div>
       </form>
     </main>
   </section>
-
+  <div id="wg-api-football-livescore" data-host="v3.football.api-sports.io" data-refresh="60"
+    data-key="66f68ea58128173bc1af9dfbd7f4455c" data-theme="dark" data-show-errors="false" class="api_football_loader">
+  </div>
   <footer>
     <nav class="menu flex-row " id="canchas">
       <div class="flex-row menu_div">
@@ -94,6 +104,19 @@
 
     </nav>
   </footer>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+    crossorigin="anonymous"></script>>
+
+  <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  <script src="sweetalert2.all.min.js"></script>
+  <script src="./Js/contacto.js"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+
+  <script type="text/javascript">
+    emailjs.init('thdjesXS7ohqSzIuD')
+  </script>
+
 </body>
 
 </html>

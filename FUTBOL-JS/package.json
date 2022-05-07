@@ -25,6 +25,7 @@
   "dependencies": {
     "@sweetalert2/themes": "^5.0.10",
     "animate.css": "^4.1.1",
+    "emailjs-com": "^3.2.0",
     "sweetalert2": "^11.4.9"
   }
 }
