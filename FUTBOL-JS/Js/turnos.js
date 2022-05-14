@@ -40,8 +40,8 @@ class Turnos {
     eliminarTurno(id) {
         this.turnoObj = this.turnoObj.filter(turno => turno.id !== id);
     }
-    editarTurno(turnoActualizado) {
-        this.turnoObj = this.turnoObj.map(turnos => turnos.id === turnoActualizado.id ? turnoActualizado : turnos);
+    editarTurno(turnos) {
+        this.turnoObj = this.turnoObj.map(turno => turnos.id === turnos.id ? turnos : turno);
     }
 }
 class Pantalla {
@@ -227,13 +227,6 @@ function eliminarTurno(id) {
 
 function editarTurno(turnos) {
     const { name, tel, cancha, dia, tiempo, aclaracion, id } = turnos;
-    nombre.value = name;
-    telefono.value = tel;
-    canchas.value = cancha;
-    fecha.value = dia;
-    hora.value = tiempo;
-    aclaciones.value = aclaracion;
-
     turnoObj.name = name;
     turnoObj.tel = tel;
     turnoObj.cancha = cancha;
@@ -241,6 +234,16 @@ function editarTurno(turnos) {
     turnoObj.tiempo = tiempo;
     turnoObj.aclaracion = aclaracion;
     turnoObj.id = id;
+
+
+    nombre.value = name;
+    telefono.value = tel;
+    canchas.value = cancha;
+    fecha.value = dia;
+    hora.value = tiempo;
+    aclaciones.value = aclaracion;
+
+
 
 
 

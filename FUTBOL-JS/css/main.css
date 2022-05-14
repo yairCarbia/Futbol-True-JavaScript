@@ -38,6 +38,20 @@ p {
   padding: 0; }
 
 /* HELPERS */
+.modal-backdrop {
+  position: relative !important;
+  z-index: 1050;
+  top: 1 !important;
+  font-family: "Bebas Neue", cursive;
+  font-size: 3rem !important;
+  opacity: 1.2 !important; }
+
+.pos-abs {
+  position: absolute; }
+
+.pos-rel {
+  position: relative; }
+
 .color-n {
   color: var(black); }
 
@@ -87,7 +101,7 @@ header {
         color: var(--secundario);
         background-color: #3c7209;
         transition: 0.4s ease-out all; }
-    > > >
+
 header .hero_promo {
       padding-top: 350px;
       display: flex;
@@ -554,6 +568,15 @@ header .submenu:hover #carrito {
   padding: 10px;
   min-height: 450px;
   min-width: 300px; }
+
+.container_modal h5 {
+  font-size: 3rem; }
+
+.container_modal img {
+  width: 125px; }
+
+.container_modal p {
+  color: black; }
 
 main .container_aside2 {
   min-width: 10%;

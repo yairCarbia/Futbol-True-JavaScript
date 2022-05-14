@@ -1,4 +1,18 @@
 /* HELPERS */
+.modal-backdrop{
+  position: relative !important;
+ z-index: 1050;
+  top: 1 !important;
+  font-family: $fuente;
+  font-size: 3rem !important;
+  opacity: 1.2 !important;
+}
+.pos-abs{
+  position:absolute;
+}
+.pos-rel{
+  position: relative;
+}
 .color-n {
   color: var($secundario);
 }

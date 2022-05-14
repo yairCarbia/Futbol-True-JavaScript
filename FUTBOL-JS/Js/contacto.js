@@ -40,7 +40,7 @@ document.getElementById('form')
             .then(() => {
 
                 btn.value = 'ENVIAR EMAIL';
-                // alert('Sent!');
+
             }, (err) => {
                 btn.value = 'Send Email';
                 alert(JSON.stringify(err));

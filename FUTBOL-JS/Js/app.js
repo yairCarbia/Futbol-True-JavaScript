@@ -24,22 +24,22 @@ const total = document.querySelector("#total");
 
 
 
-selectBotines.addEventListener("change", () => {
-    selectBotines.value == "all" ? mostrarProductos(stockProductos) : mostrarProductos(stockProductos.filter(element => element.talle == selectBotines.value));
-    //OPTIMIZADO
-    // if (selectBotines.value=="all"){
-    //    mostrarProductos(stockProductos);
-    // }else{
-    //     mostrarProductos(stockProductos.filter(element=>element.talle==selectBotines.value));
-    // }
-})
-selectPelota.addEventListener("change", () => {
-    if (selectPelota.value == "all") {
-        mostrarProductos(stockProductos);
-    } else {
-        mostrarProductos(stockProductos.filter(element => element.talle == selectPelota.value));
-    }
-})
+// selectBotines.addEventListener("change", () => {
+//     selectBotines.value == "all" ? mostrarProductos(stockProductos) : mostrarProductos(stockProductos.filter(element => element.talle == selectBotines.value));
+//     //OPTIMIZADO
+//     // if (selectBotines.value=="all"){
+//     //    mostrarProductos(stockProductos);
+//     // }else{
+//     //     mostrarProductos(stockProductos.filter(element=>element.talle==selectBotines.value));
+//     // }
+// })
+// selectPelota.addEventListener("change", () => {
+//     if (selectPelota.value == "all") {
+//         mostrarProductos(stockProductos);
+//     } else {
+//         mostrarProductos(stockProductos.filter(element => element.talle == selectPelota.value));
+//     }
+// })
 
 
 
@@ -50,23 +50,24 @@ selectPelota.addEventListener("change", () => {
 function agregarCarrito(id) {
     let encontrar = carrito.find(item => item.id == id)
     if (encontrar) {
+
         encontrar.cantidad = encontrar.cantidad + 1;
         document.getElementById(`und${encontrar.id}`).innerHTML = `
         
-        <p id="und${encontrar.id}">  Und:${encontrar.cantidad} </p>
+        <p id="und${encontrar.id}" class="color-n ">  Und:${encontrar.cantidad} </p>
         `;
         actualizarCarrito();
     } else {
         let producto = stockProductos.find(element => element.id === id);
         producto.cantidad = 1;
-        //  console.log(carrito.push(producto));
+        carrito.push(producto);
         //OPTIMIZADO
-        let carr = [...carrito, producto];
+        // let carr = [...carrito, producto];
 
 
         mostrarCarrito(producto);
 
-        actualizarCarrito();
+        actualizarCarrito(carrito);
     }
     localStorage.setItem("carrito", JSON.stringify(carrito));
 }
@@ -82,14 +83,14 @@ function mostrarCarrito(producto) {
                ${producto.nombre}
             </td>
             <td>
-               $${producto.precio * producto.cantidad}
+            <p class="color-n" > $${producto.precio * producto.cantidad}</p>  
             </td>
             <td>
-             <p id="und${producto.id}">  Und:${producto.cantidad} </p>
+             <p id="und${producto.id}" class="color-n">  Und:${producto.cantidad} </p>
             </td>
         
             <td>
-            <button type="button" class="btn btn-danger" id="eliminar${producto.id}">ELIMINAR</button>
+            <button type="button" class="btn btn-danger"  id="eliminar${producto.id}" style="font-size: 3rem;">ELIMINAR</button>
          </td>
             
             `;
@@ -141,22 +142,6 @@ function mostrarCarrito(producto) {
                     console.log("*NO se elimina la venta*");
                 }
             });
-        //     if(producto.cantidad==1){
-        //     btnDelete.parentElement.parentElement.remove(); 
-        //     carrito= carrito.filter(element =>element.id != producto.id );
-        //     actualizarCarrito(); 
-        //     localStorage.setItem("carrito",JSON.stringify(carrito));  
-
-        // }
-        //     else{
-        //         producto.cantidad=producto.cantidad-1;
-        //         document.getElementById(`und${producto.id}`).innerHTML=`
-
-        //         <p id="und${producto.id}">  Und:${producto.cantidad} </p>
-        //         `;
-        //         actualizarCarrito(); 
-        //         localStorage.setItem("carrito",JSON.stringify(carrito));
-        //     }
 
 
     })
@@ -167,6 +152,9 @@ function mostrarCarrito(producto) {
 function actualizarCarrito() {
 
     total.innerText = carrito.reduce((acc, el) => acc + (el.precio * el.cantidad), 0);
+
+
+
 }
 
 
@@ -191,6 +179,9 @@ obtenerLocarStorage();
 mostrarHTML();
 
 function mostrarHTML() {
+    // const url = "../Base/datos.json";
+    // const rta = await fetch(url);
+    // const {datos}=await rta.json();
     fetch("../Base/datos.json").then(respuesta => respuesta.json()).then(datos => {
         datos.forEach(element => {
             let div = document.createElement("div");
@@ -213,7 +204,10 @@ function mostrarHTML() {
             tienda.appendChild(div);
             let btnAdd = document.querySelector(`#agregar${element.id}`);
             btnAdd.addEventListener("click", () => {
+
+
                 agregarCarrito(element.id);
+                // carrito.push(element);
                 //Adicion libreria
                 Swal.fire({
                     heigth: 600,

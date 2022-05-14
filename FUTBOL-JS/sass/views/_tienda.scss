@@ -5,13 +5,12 @@ header{
   
   .submenu #carrito{
     display: none;
-    
+
   }
   .submenu:hover #carrito{
     font-family: $fuente;
     font-size: 3rem;
-    
-    display: block;
+   display: block;
     position: absolute;
     right:0;
   
@@ -23,7 +22,17 @@ header{
     min-width: 300px;
   } 
 }
-
+.container_modal{
+  h5{
+    font-size: 3rem;
+  }
+  img{
+    width: 125px;
+  }
+p{
+  color: black;
+}
+}
 main{
     .container{
         // display: flex;

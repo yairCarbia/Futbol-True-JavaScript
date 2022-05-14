@@ -299,6 +299,7 @@
         "id": 38,
         "nombre": "Pelota Adidas",
         "tipo": "pelota",
+        "talle":"3",
         "precio": 2220,
         "img": "./img/padidas.jpg"
     },
@@ -306,21 +307,10 @@
         "id": 39,
         "nombre": "Pelota Adidas",
         "tipo": "pelota",
-        "precio": 2220,
-        "img": "./img/padidas.jpg"
-    },
-    {
-        "id": 40,
-        "nombre": "Pelota Adidas",
-        "tipo": "pelota",
-        "precio": 2220,
-        "img": "./img/padidas.jpg"
-    },
-    {
-        "id": 41,
-        "nombre": "Pelota Adidas",
-        "tipo": "pelota",
+        "talle":"4",
         "precio": 2220,
         "img": "./img/padidas.jpg"
     }
+ 
+    
 ]

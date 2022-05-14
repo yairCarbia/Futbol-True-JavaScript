@@ -42,9 +42,15 @@
             <ul>
                 <li class="submenu">
                     <div>
-                        <img src="img/icons8-carrito-de-la-compra-cargado-60.png" alt="carrito">
+                        <button type="button" class="btn btn-success" data-bs-toggle="modal"
+                            data-bs-target="#exampleModal">
+                            CARRITO
+                            <img src="img/icons8-carrito-de-la-compra-cargado-60.png" alt="carrito">
+                        </button>
+
                     </div>
-                    <div id="carrito">
+
+                    <!-- <div id="carrito">
 
                         <table class="table">
                             <thead>
@@ -62,7 +68,7 @@
                             <p>Precio Total:$ <span id="total">0</span></p>
                         </table>
 
-                    </div>
+                    </div> -->
                 </li>
             </ul>
 
@@ -71,7 +77,45 @@
 
 
     </header>
-    <select id="selectBotines" class="form-select form-select-lg mb-3" aria-label=".form-select-lg example">
+
+
+    <!-- Modal -->
+
+    <div class="modal modal-backdrop fade container_modal
+        pos-rel" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-fullscreen ">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">CARRITO</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th scope="col">Imagen</th>
+                                <th scope="col">Item</th>
+                                <th scope="col">Precio</th>
+                                <th scope="col">Cantidad</th>
+
+                            </tr>
+                        </thead>
+                        <tbody id="items">
+
+                        </tbody>
+                        <p>Precio Total:$ <span id="total">0</span></p>
+                    </table>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-danger" style="font-size: 3rem ;"
+                        data-bs-dismiss="modal">Cerrar</button>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- <select id="selectBotines" class="form-select form-select-lg mb-3" aria-label=".form-select-lg example">
         <option selected value="all">Selecciona por talles BOTINES!</option>
         <option value="S">S</option>
         <option value="M">M</option>
@@ -85,12 +129,12 @@
         <option value="4">4</option>
         <option value="5">5</option>
     </select>
-    <section>
-        <main id="contenedor_productos" class="productos">
+    <section> -->
+    <main id="contenedor_productos" class="productos">
 
-            <div class=" flex-row container">
+        <div class=" flex-row container">
 
-                <!-- <aside id="aside2" class="flex-column titulo aside2 aside3 container_aside2">
+            <!-- <aside id="aside2" class="flex-column titulo aside2 aside3 container_aside2">
                     <h3 class="titulo container_h3">Tienda</h3>
                     <nav class="indice  flex-column container_aside_nav">
                         <a class="boton container_canchas_boton" href="#penalty">Pelota penalty</a>
@@ -102,27 +146,27 @@
                         <a class="boton container_canchas_boton" href="#nike">Botin nike</a> -->
 
 
-                </nav>
-                </aside> -->
-                <!-- flex-row  -->
-                <div class="contenedor_tienda_pelotas container_tienda ">
+            </nav>
+            </aside> -->
+            <!-- flex-row  -->
+            <div class="contenedor_tienda_pelotas container_tienda ">
 
-                    <!-- div de abajo clases :flex-column contenedor_tienda_grid ancla -->
-                    <div class="  container_tienda_pelotas" id="tienda-futbol">
+                <!-- div de abajo clases :flex-column contenedor_tienda_grid ancla -->
+                <div class="  container_tienda_pelotas" id="tienda-futbol">
 
-                        <!-- fin pelotas -->
-                    </div>
-
+                    <!-- fin pelotas -->
                 </div>
-            </div>
-            </div>
 
             </div>
+        </div>
+        </div>
+
+        </div>
 
 
-            </div>
+        </div>
 
-        </main>
+    </main>
     </section>
     <footer>
         <nav class="menu flex-row " id="canchas">
