@@ -101,7 +101,7 @@ header {
         color: var(--secundario);
         background-color: #3c7209;
         transition: 0.4s ease-out all; }
-
+    > > >
 header .hero_promo {
       padding-top: 350px;
       display: flex;
