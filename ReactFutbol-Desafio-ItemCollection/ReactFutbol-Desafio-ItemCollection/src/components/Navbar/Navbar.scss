@@ -1,0 +1,63 @@
+.header{
+    background-image: linear-gradient(to right , rgb(0 0 0 /1),rgb(0 0 0 /.1)),url(../../img/pexels-pragyan-bezbaruah-2629412.jpg);
+    background-size: cover;
+    background-position:50%;
+    padding: 12rem 0;
+color:white;
+}
+
+.barra{
+display: flex;
+flex-direction: column;
+align-items: center;
+padding: 1rem;
+}
+@media(min-width:768px){
+      .barra{
+        margin-top: 0;
+        flex-direction: row;
+        justify-content: space-between;
+      }
+     
+}
+.logo{
+    background-image: linear-gradient(to right , rgb(0 0 0 /8),rgb(0 0 0 /.7)),url(../../img/cm.jpeg);
+    border-radius:5px;
+
+}
+.cart:hover{
+    color: black;
+}
+@media(min-width:768px){
+    .navegacion{
+        margin-top:0rem;
+    }
+}
+.navegacion{
+    margin-top:1rem !important;
+display: flex !important;
+gap: 1rem !important;
+}
+@media(max-width:450px){
+    .navegacion{
+        margin-top:1rem !important;
+display: flex !important;
+flex-direction: column !important;
+    }
+}
+
+.navegacion a{
+    color: white;
+
+    text-decoration: none;
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 1rem;
+    padding: .5rem;
+    transition-property: background-color;
+    transition-duration:.5s;
+
+}
+.navegacion a:hover{
+    background-color: yellow;
+}
